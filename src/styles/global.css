@@ -31,6 +31,11 @@ h3 {
 
 p {
   font-size: 1rem;
+  color: #9e9aa7;
+}
+
+a {
+  text-decoration: none;
 }
 
 input {
@@ -63,18 +68,40 @@ button {
   border-radius: 30px;
   font-size: 1.1rem;
   border: none;
+  font-weight: bold;
   outline: none;
   color: white;
+  padding: .6rem 1rem;
   background-color: #2acfcf;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
-a {
-  text-decoration: none;
+button:hover {
+  background-color: #6be1e1;
 }
 
-#root {
-  max-width: 1112px;
-  padding: 1rem;
+.container {
+  max-width: 1128px;
+  padding: 0rem 1rem;
   margin: auto;
+}
+
+.header {
+  background-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b3054;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=global.css.map */

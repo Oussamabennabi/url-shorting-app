@@ -1,0 +1,187 @@
+.form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 2rem 2.2rem;
+  background-image: url(../../../images/bg-shorten-desktop.svg);
+  background-color: #3b3054;
+  border-radius: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.form-section button {
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.form-section .input-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.form-section .input-container input {
+  padding: 1rem;
+  width: 100%;
+}
+
+.form-section .input-container input.error {
+  outline: 4px solid #f46262;
+}
+
+.form-section .input-container .error-txt {
+  display: none;
+}
+
+.form-section .input-container .error-txt.show-error {
+  display: inline;
+  position: absolute;
+  top: 100%;
+  margin: .5rem 0;
+  color: #f46262;
+  font-size: 14px;
+}
+
+.links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-y: auto;
+  max-height: 22.2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  /* height: 4.5rem; */
+  padding: 1rem 1.4rem;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.link-container .right-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 50%;
+}
+
+.link-container .right-container button {
+  border-radius: 5px;
+}
+
+.link-container .right-container a {
+  color: #2acfcf;
+  padding-right: 1rem;
+}
+
+.link-container .right-container .shorted-link {
+  overflow-x: auto;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+
+.link-container .left-container {
+  overflow-x: auto;
+  max-width: 50%;
+  color: #9e9aa7;
+}
+
+@media screen and (max-width: 769px) {
+  .form-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-section button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .form-section .input-container {
+    width: 100%;
+  }
+  .link-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .link-container .right-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+  .link-container .right-container button {
+    width: 100%;
+  }
+  .link-container .right-container a {
+    padding-right: 1rem;
+  }
+  .link-container .right-container .shorted-link {
+    margin: 0;
+  }
+  .link-container .left-container {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #9e9aa7;
+    padding-bottom: 1rem;
+    min-width: 100%;
+  }
+}
+/*# sourceMappingURL=FormField.css.map */

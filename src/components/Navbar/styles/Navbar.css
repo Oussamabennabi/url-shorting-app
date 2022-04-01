@@ -1,0 +1,169 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 5rem;
+}
+
+.navbar .links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.navbar .links-container .link {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 .5rem;
+  color: #9e9aa7;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.navbar .links-container .link:hover {
+  color: #232127;
+}
+
+.navbar .links-container .left-links {
+  margin-left: 20px;
+}
+
+.navbar .hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 769px) {
+  .navbar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar .links-container.hidden {
+    display: none;
+  }
+  .navbar .links-container.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    inset: 0;
+    top: 5rem;
+    z-index: 100;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #3b3054;
+    border-radius: 15px;
+    opacity: 1;
+    -webkit-animation: myanimation .15s ease-in-out;
+            animation: myanimation .15s ease-in-out;
+  }
+  @-webkit-keyframes myanimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes myanimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .navbar .links-container.show .left-links {
+    margin-left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .hamburger {
+    display: block;
+    width: 40px;
+    height: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    cursor: pointer;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
+  .navbar .hamburger span {
+    height: 4px;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    background-color: #35323e;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
+  .navbar .hamburger span:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .navbar .hamburger:hover span {
+    background-color: #9e9aa7;
+  }
+  .navbar .hamburger.show span {
+    width: 120%;
+  }
+  .navbar .hamburger.show span:first-child {
+    -webkit-transform: translateY(15.5px) rotate(41deg);
+            transform: translateY(15.5px) rotate(41deg);
+  }
+  .navbar .hamburger.show span:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar .hamburger.show span:last-child {
+    -webkit-transform: translateY(-15.5px) rotate(-41deg);
+            transform: translateY(-15.5px) rotate(-41deg);
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

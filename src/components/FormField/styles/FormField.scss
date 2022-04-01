@@ -1,0 +1,146 @@
+@import '../../../styles/var/variables.scss';
+
+.form-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	padding: 2rem 2.2rem;
+	background-image: url(../../../images/bg-shorten-desktop.svg);
+	background-color: $DarkViolet;
+	border-radius: 8px;
+	transform: translateY(-50%);
+	// TODO:
+	button {
+		border-radius: 8px;
+		padding: 1rem;
+	}
+	
+	.input-container {
+		// background-color: red;
+		width: 80%;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+			position: relative;
+
+		input {
+			padding: 1rem;
+			width: 100%;
+		}
+		input.error {
+			outline: 4px solid $Red;
+		}
+		.error-txt {
+			display: none;
+		}
+		.error-txt.show-error {
+
+			display: inline;
+			position: absolute;
+			top: 100%;
+			margin: .5rem 0;
+			color: $Red;
+			font-size: 14px;
+		}
+	}
+	
+}
+
+
+
+
+.links-container {
+display: flex;
+  overflow-y: auto;
+  max-height: 22.2rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+.link-container {
+  width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0.5rem 0;
+	font-weight: bold;
+	// TODO:
+	/* height: 4.5rem; */
+
+	
+	padding: 1rem 1.4rem;
+
+	border-radius: 8px;
+	background-color: white;
+
+	.right-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 50%;
+		button {
+			border-radius: 5px;
+		}
+		a {
+			color: $Cyan;
+			padding-right: 1rem;
+		}
+		.shorted-link {
+			overflow-x: auto;
+			margin-left: 1rem;
+			margin-right: 0.5rem;
+		}
+	}
+
+	.left-container {
+		overflow-x: auto;
+		max-width: 50%;
+		color: $GrayishViolet ;
+	}
+	
+}
+
+@media screen and (max-width:769px) {
+	.form-section {
+		flex-direction: column;
+		button {
+			width: 100%;
+			margin-top: 1rem;
+		}
+		.input-container {
+			width: 100%;
+		}
+	}
+	.link-container {
+		flex-direction: column;
+		align-items: flex-start;
+		.right-container {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column;
+			width: 100%;
+			max-width: 100%;
+			gap: 1rem;
+			button {
+				width: 100%;
+			}
+			a {
+				padding-right: 1rem;
+			}
+			.shorted-link {
+				margin: 0;
+			}
+		}
+
+		.left-container {
+			margin-bottom: 1rem;
+			border-bottom: 1px solid $GrayishViolet;
+			padding-bottom: 1rem;
+			min-width: 100%;
+		}
+	}
+}

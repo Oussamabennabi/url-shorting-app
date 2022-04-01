@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "Footer.scss",
+        "../../../styles/var/variables.scss"
+    ],
+    "names": [],
+    "file": "Footer.css"
+}

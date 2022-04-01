@@ -1,0 +1,118 @@
+@import '../../../styles/var/variables.scss';
+
+.navbar {
+  display:flex ;
+  justify-content: flex-start;
+  align-items: center;
+  //TODO:
+  min-height: 5rem;
+  .links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    transition: $Alltransition;
+    .link {
+        //TODO:
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0 .5rem;
+        color: $GrayishViolet;
+        transition: $Alltransition;
+        &:hover {
+
+          color: $VeryDarkViolet;
+        }
+      }
+    .right-links{
+    }
+    .left-links{
+      margin-left: 20px;
+    }
+  }
+  .hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width:769px){
+  .navbar{
+    justify-content: space-between;
+
+    .links-container.hidden {
+        display: none;
+    }
+    .links-container.show {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      position: absolute;
+      inset:0 ;
+      top: 5rem;
+      z-index: 100;
+      margin: 0 auto;
+      width: 80%;
+      background-color: $DarkViolet;
+      border-radius: 15px;
+      opacity:1;
+      animation: myanimation .15s ease-in-out;
+      @keyframes myanimation {
+        0% {
+          opacity: 0;
+        }100% {
+          opacity: 1;
+        }
+      }
+      .left-links{
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+    }
+
+  }
+    .hamburger {
+      display: block;
+      //TODO:
+      width: 40px;
+      height: 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: $Alltransition;
+      span {
+        height: 4px;
+        border-radius: 5px;
+        width: 100%;
+        display: block;
+        background-color: $VeryDarkBlue;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      transition: $Alltransition;
+      }
+      &:hover span {
+        background-color: $GrayishViolet;
+      }
+    }
+    .hamburger.show{
+      span {
+        width: 120%;
+      }
+      span:first-child {
+        transform: translateY(15.5px) rotate(41deg) ;
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:last-child {
+        transform: translateY(-15.5px) rotate(-41deg) ;
+      }
+    }
+  }
+  
+}

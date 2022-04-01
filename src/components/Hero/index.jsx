@@ -1,17 +1,20 @@
-import Container  from "../Hero/Hero.styles";
+//STYLES
 
+import './styles/Hero.css';
 
 export default function Hero() {
-  
-
-  return (
-    <Container>
-      <div className="hero-text">
-        <h1>More than just shorter links</h1>
-        <p>Build your brand’s recognition and get detailed insights 
-          on how your links are performing.</p>
-        <button>Get Started</button>
-      </div>
-    </Container>
-  );
+	return (
+		<div className="header header-hero">
+			<main className="container hero">
+				<div className="hero-text">
+					<h1>More than just shorter links</h1>
+					<p>
+						Build your brand’s recognition and get detailed insights on how your
+						links are performing.
+					</p>
+					<button>Get Started</button>
+				</div>
+			</main>
+		</div>
+	);
 }

@@ -1,0 +1,14 @@
+.section-footer {
+  background-image: url(../../../images/bg-boost-desktop.svg);
+  width: 100%;
+  background-color: #3b3054;
+  text-align: center;
+  padding: 3rem;
+}
+
+.section-footer h2 {
+  color: #fff;
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+/*# sourceMappingURL=SectionFooter.css.map */

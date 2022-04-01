@@ -1,0 +1,48 @@
+@import '../../../styles/var/variables.scss';
+
+.header-hero {
+		background-image: url(../../../images/illustration-working.svg);
+    background-position: 90% 0%;
+    background-size:auto;
+    background-repeat: no-repeat; 
+
+}
+.hero {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2rem;
+  min-height: 37rem;
+	.hero-text {
+		max-width: 400px;
+		//TODO:
+		h1 {
+			padding-bottom: 1rem;
+		}
+		p {
+			padding-bottom: 1rem;
+		}
+	}
+}
+
+	@media screen and (max-width: 770px) {
+		.hero {
+			flex-direction: column;
+  		min-height: 47rem;
+			.hero-text {
+				margin-top: 18rem;
+				text-align: center;
+				//TODO:
+				h1 {
+				}
+				p {
+				}
+			}
+		}
+		.header-hero {
+    	background-position: top center;
+			background-size: 70%;
+		} 
+		
+	
+	}

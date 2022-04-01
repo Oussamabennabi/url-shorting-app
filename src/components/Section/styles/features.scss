@@ -1,0 +1,149 @@
+@import '../../../styles/var/variables.scss';
+
+.features {
+	flex-direction: column;
+	.section-info {
+		text-align: center;
+		width: 60%;
+		h2 {
+			font-weight: bold;
+		}
+	}
+	.section-cards {
+		display: grid;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		grid-template-columns: repeat(3, 1fr);
+		min-height: 35rem;
+		//TODO:
+		gap: 2rem;
+		margin-top: 5rem;
+	}
+
+	.section-card {
+		/* width: 300px; */
+		min-height: 250px;
+		border-radius: 8px;
+		background-color: white;
+		position: relative;
+		.artical-logo {
+			position: absolute;
+			inset: 0;
+			border-radius: 50%;
+			transform: translate(0, -50%);
+			background-color: $DarkViolet;
+			//TODO:
+			margin-left: 3rem;
+			padding: 1.2rem;
+		}
+		.artical-info {
+			//TODO:
+			padding: 3rem;
+			padding-top: 3.5rem;
+			h3 {
+				padding-bottom: 10px;
+			}
+		}
+	}
+	.section-card:not(:last-child)::before {
+		content: '';
+		position: absolute;
+		//TODO:
+		height: 10px;
+		inset: 0;
+		transform: translateX(50%);
+		top: 50%;
+		width: 100%;
+		z-index: -10;
+		background-color: $Cyan;
+	}
+	.section-card:last-child {
+		top: 20%;
+	}
+	.section-card:nth-child(2) {
+		// transform: translateY(20%);
+		top: 10%;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.features {
+		.section-cards {
+			grid-template-columns: repeat(2, 1fr);
+			justify-content: center;
+			.section-card:last-child {
+				grid-column-start: 1;
+				grid-column-end: 3;
+				margin-top: 3rem;
+			}
+			
+			.section-card:not(:last-child)::after {
+				content: '';
+				position: absolute;
+				height: 100%;
+				inset: 0;
+				left: 50%;
+				top: 50%;
+				//TODO:
+				width: 10px;
+				//
+				z-index: -10;
+				background-color: $Cyan;
+			}
+			.section-card:last-child,.section-card:nth-child(2) {
+				top: 0%;
+			}
+			
+			.section-card:nth-child(2)::before {
+				display: none;
+			}
+		}
+	}
+}
+@media screen and (max-width: 759px) {
+	.features {
+		.section-cards {
+			grid-template-columns: repeat(1, 1fr);
+			justify-content: center;
+			.section-card:not(:first-child){
+				margin-top:3rem ;
+			}
+			.section-card:last-child {
+				grid-column-start: 1;
+				grid-column-end: 1;
+				top: 0%;
+			}
+			.section-card:not(:last-child)::after {
+				height: 100%;
+				left: 84px;
+			}
+			.section-card:nth-child(2) {
+				top: 0%;
+			}
+			.section-card:first-child::before {
+				display: none;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 617px) {
+	.features {
+		.section-cards {
+			.section-card {
+				text-align: center;
+				margin-bottom: 2rem;
+				.artical-logo {
+					left: 50%;
+					transform: translate(-100%, -50%);
+				}
+			}
+			.section-card:not(:last-child)::after {
+				height: 100%;
+				left: 49.5%;
+			}
+		}
+	}
+}

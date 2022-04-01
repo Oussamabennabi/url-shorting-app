@@ -1,0 +1,160 @@
+.features {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.features .section-info {
+  text-align: center;
+  width: 60%;
+}
+
+.features .section-info h2 {
+  font-weight: bold;
+}
+
+.features .section-cards {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  min-height: 35rem;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.features .section-card {
+  /* width: 300px; */
+  min-height: 250px;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+}
+
+.features .section-card .artical-logo {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: #3b3054;
+  margin-left: 3rem;
+  padding: 1.2rem;
+}
+
+.features .section-card .artical-info {
+  padding: 3rem;
+  padding-top: 3.5rem;
+}
+
+.features .section-card .artical-info h3 {
+  padding-bottom: 10px;
+}
+
+.features .section-card:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  height: 10px;
+  inset: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  top: 50%;
+  width: 100%;
+  z-index: -10;
+  background-color: #2acfcf;
+}
+
+.features .section-card:last-child {
+  top: 20%;
+}
+
+.features .section-card:nth-child(2) {
+  top: 10%;
+}
+
+@media screen and (max-width: 960px) {
+  .features .section-cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .features .section-cards .section-card:last-child {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 3rem;
+  }
+  .features .section-cards .section-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    inset: 0;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    z-index: -10;
+    background-color: #2acfcf;
+  }
+  .features .section-cards .section-card:last-child, .features .section-cards .section-card:nth-child(2) {
+    top: 0%;
+  }
+  .features .section-cards .section-card:nth-child(2)::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .features .section-cards {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .features .section-cards .section-card:not(:first-child) {
+    margin-top: 3rem;
+  }
+  .features .section-cards .section-card:last-child {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 1;
+    top: 0%;
+  }
+  .features .section-cards .section-card:not(:last-child)::after {
+    height: 100%;
+    left: 84px;
+  }
+  .features .section-cards .section-card:nth-child(2) {
+    top: 0%;
+  }
+  .features .section-cards .section-card:first-child::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .features .section-cards .section-card {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .features .section-cards .section-card .artical-logo {
+    left: 50%;
+    -webkit-transform: translate(-100%, -50%);
+            transform: translate(-100%, -50%);
+  }
+  .features .section-cards .section-card:not(:last-child)::after {
+    height: 100%;
+    left: 49.5%;
+  }
+}
+/*# sourceMappingURL=features.css.map */
