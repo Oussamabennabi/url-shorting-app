@@ -11,10 +11,14 @@
           align-items: center;
   margin: 0.5rem 0;
   font-weight: bold;
-  /* height: 4.5rem; */
   padding: 1rem 1.4rem;
   border-radius: 8px;
   background-color: white;
+}
+
+.link-container .delete-btn {
+  background-color: #f46262;
+  padding: 10px;
 }
 
 .link-container button.copied-btn {

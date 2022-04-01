@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import LinkContainer from '../LinkContainer';
 //STYLES
-
 import './styles/FormField.css';
 
 const BASE_URL = `https://api.shrtco.de/v2/shorten?url=`;
@@ -14,8 +13,15 @@ export default function Form() {
 			short_URL: '',
 		},
 	]);
-	const [copied, setCopied] = useState(false);
+	// LOCAL STORAGE : !!! there is a problem if we have a lot of links, its better to add a delete functionality
+	useEffect(() => {
+    localStorage.setItem('links', JSON.stringify(Links));
+	}, [Links])
 	
+  const localLinks = JSON.parse(localStorage.getItem('links'))
+  useEffect(function () {
+    setLinks(localLinks?localLinks:[])
+    },[])
 	useEffect(() => {
 		const fetch_URL = async (originalUrl) => {
 			originalUrl &&
@@ -38,14 +44,13 @@ export default function Form() {
 								...prevData,
 							];
 						});
+						localStorage.setItem('links', JSON.stringify(Links));
 					}
 					)
 					.catch((err) => console.log(err)));
 		};
 		fetch_URL(originalUrl);
-		
 	}, [originalUrl]);
-
 
 	function handleSubmit(e) {
 		e.preventDefault();
@@ -56,7 +61,6 @@ export default function Form() {
 		setOriginalUrl(e.target[0].value);
 	}
 
-	
 	const LinkEls = Links && Links.map((link) => {
 		return (
 			link.original_URL && (

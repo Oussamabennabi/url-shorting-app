@@ -1,1 +1,120 @@
 @import '../../../styles/var/variables.scss';
+
+
+.footer {
+  background-color: $VeryDarkViolet;
+  .container {
+    display: grid;
+    grid-template-columns: 371px 570px 176px;
+    grid-template-rows: 1fr;
+    padding-top: 68px;
+    .logo {
+      img {
+        fill: white;
+      }
+  }
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(4,191px);
+    .cl1,.cl2,.cl3 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      h5 {
+        color: white;
+        margin-bottom: 34px;
+      }
+      a {
+        color: $GrayishViolet;
+        transition: $Alltransition;
+        margin-bottom: 17px;
+        &:hover {
+          color: $Cyan;
+        }
+      }
+    }
+
+  }
+
+    .socialMedia-icons {
+      img{
+        cursor: pointer;
+        margin-right: 17px;
+        transition: $Alltransition;
+        &:hover {
+          color: $Cyan;
+          fill:  $Cyan;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1160px) {
+  .footer {
+  .container {
+    grid-template-columns: 300px 560px 166px;
+  }
+}
+}
+@media screen and (max-width:1055px) {
+  .footer {
+  .container {
+    grid-template-columns: 230px 530px 166px;
+  }
+}
+}
+@media screen and (max-width:960px) {
+  .footer {
+  .container {
+    grid-template-columns: 210px 500px 166px;
+    .footer-links {
+      grid-template-columns: repeat(3,161px);
+    }
+  }
+}
+}
+@media screen and (max-width:903px) {
+  .footer {
+  .container {
+    grid-template-columns: 210px 500px;
+    .socialMedia-icons {
+      grid-column-start: 1;
+      grid-column-start: 2;
+    }
+  }
+}
+}
+@media screen and (max-width:762px) {
+  .footer {
+    .container {
+      grid-template-columns:200px ;
+      justify-content: center;
+      align-items: center;
+      .logo {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .footer-links {
+        grid-template-columns: 1fr;
+        .cl1,.cl2,.cl3 {
+          justify-content: center;
+          align-items: center;
+          h5{
+            margin-bottom: 6px;
+          }
+          a:last-child {
+            margin-bottom: 40px;
+          }
+        }
+      }
+      .socialMedia-icons {
+        grid-column-start: 1;
+        grid-column-start: 1;
+        text-align: center;
+      }
+    }
+}
+}

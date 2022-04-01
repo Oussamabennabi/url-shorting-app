@@ -1,118 +1,147 @@
 @import '../../../styles/var/variables.scss';
 
 .navbar {
-  display:flex ;
-  justify-content: flex-start;
-  align-items: center;
-  //TODO:
-  min-height: 5rem;
-  .links-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    transition: $Alltransition;
-    .link {
-        //TODO:
-        font-size: 18px;
-        font-weight: bold;
-        padding: 0 .5rem;
-        color: $GrayishViolet;
-        transition: $Alltransition;
-        &:hover {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 8.375rem;
+	.navLogo {
+		margin-right: 45px;
+	}
+	.links-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		width: 100%;
+		transition: $Alltransition;
 
-          color: $VeryDarkViolet;
-        }
-      }
-    .right-links{
-    }
-    .left-links{
-      margin-left: 20px;
-    }
-  }
-  .hamburger {
-    display: none;
-  }
+		.link {
+			font-size: 18px;
+			font-weight: bold;
+			padding-right: 32px;
+			color: $GrayishViolet;
+			transition: $Alltransition;
+			&:hover {
+				color: $VeryDarkViolet;
+			}
+		}
+		.right-links {
+			.link {
+				padding-right: 40px;
+			}
+			button {
+				padding: 12px 23px;
+			}
+		}
+		.left-links {
+			margin-left: 20px;
+		}
+	}
+	.hamburger {
+		display: none;
+	}
 }
 
-@media screen and (max-width:769px){
-  .navbar{
-    justify-content: space-between;
+@media screen and (max-width: 769px) {
+	.navbar {
+		justify-content: space-between;
 
-    .links-container.hidden {
-        display: none;
-    }
-    .links-container.show {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-      position: absolute;
-      inset:0 ;
-      top: 5rem;
-      z-index: 100;
-      margin: 0 auto;
-      width: 80%;
-      background-color: $DarkViolet;
-      border-radius: 15px;
-      opacity:1;
-      animation: myanimation .15s ease-in-out;
-      @keyframes myanimation {
-        0% {
-          opacity: 0;
-        }100% {
-          opacity: 1;
+		.links-container.hidden {
+			display: none;
+		}
+		.links-container.show {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: column;
+			position: absolute;
+			inset: 0;
+			top: 5rem;
+			z-index: 100;
+			margin: 29px 1rem;
+			padding: 26px;
+			width: calc(100% - 2rem);
+      min-height: 383px;
+
+			background-color: $DarkViolet;
+			border-radius: 15px;
+			opacity: 1;
+			animation: myanimation 0.15s ease-in-out;
+			@keyframes myanimation {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			.link {
+				color: white;
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 0;
+			}
+			.left-links {
+				width: 100%;
+				margin: 0;
+				.link {
+					margin-bottom: 20px;
+				}
+				.link:last-child {
+          padding-bottom: 40px;
+          margin: 0;
+					border-bottom: 1px solid $GrayishViolet;
+				}
+			}
+      .right-links {
+          width: 100%;
+        .link {
+          margin-top: 37px;
+          margin-bottom: 26px;
+        }
+        button {
+          padding: 17px 0;
+          margin: 0;
+          width: 100%;
         }
       }
-      .left-links{
-        margin-left: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction:column;
-    }
+		}
+		.hamburger {
+			display: block;
+			width: 25px;
+			height: 21px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: column;
+			cursor: pointer;
+			transition: $Alltransition;
+			span {
+				height: 4px;
+				width: 100%;
+				display: block;
+				background-color: $VeryDarkBlue;
 
-  }
-    .hamburger {
-      display: block;
-      //TODO:
-      width: 40px;
-      height: 35px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: column;
-      cursor: pointer;
-      transition: $Alltransition;
-      span {
-        height: 4px;
-        border-radius: 5px;
-        width: 100%;
-        display: block;
-        background-color: $VeryDarkBlue;
-        &:not(:last-child) {
-          margin-bottom: 10px;
-        }
-      transition: $Alltransition;
-      }
-      &:hover span {
-        background-color: $GrayishViolet;
-      }
-    }
-    .hamburger.show{
-      span {
-        width: 120%;
-      }
-      span:first-child {
-        transform: translateY(15.5px) rotate(41deg) ;
-      }
-      span:nth-child(2) {
-        opacity: 0;
-      }
-      span:last-child {
-        transform: translateY(-15.5px) rotate(-41deg) ;
-      }
-    }
-  }
-  
+				transition: $Alltransition;
+			}
+			&:hover span {
+				background-color: $GrayishViolet;
+			}
+		}
+		.hamburger.show {
+			span {
+				width: 110%;
+			}
+			span:first-child {
+				transform: translate(-5%, 210%) rotate(41deg);
+			}
+			span:nth-child(2) {
+				opacity: 0;
+			}
+			span:last-child {
+				transform: translate(-5%, -210%) rotate(-41deg);
+			}
+		}
+	}
 }

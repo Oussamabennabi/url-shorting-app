@@ -7,10 +7,14 @@ import facebookIcon from '../../images/icon-facebook.svg';
 import twitterIcon from '../../images/icon-twitter.svg';
 import instagramIcon from '../../images/icon-instagram.svg';
 import pinterestIcon from '../../images/icon-pinterest.svg';
+import Logo from '../../images/logo.svg';
 export default function Footer() {
 	return (
-		<footer className="container footer">
-			<div className="logo"></div>
+		<footer className=" footer">
+			<div className='container'>
+				<div className="logo">
+					<img src={Logo} alt="logo"/>
+			</div>
 			<div className="footer-links">
 				<div className="cl1">
 					<h5>Features</h5>
@@ -39,6 +43,8 @@ export default function Footer() {
 				<img src={instagramIcon} alt="pinterest" />
 				<img src={pinterestIcon} alt="instagrame" />
 			</div>
+			</div>
+			
 		</footer>
 	);
 }

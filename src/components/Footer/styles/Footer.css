@@ -1,1 +1,149 @@
-/* No CSS *//*# sourceMappingURL=Footer.css.map */
+.footer {
+  background-color: #232127;
+}
+
+.footer .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 371px 570px 176px;
+      grid-template-columns: 371px 570px 176px;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  padding-top: 68px;
+}
+
+.footer .container .logo img {
+  fill: white;
+}
+
+.footer .container .footer-links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (191px)[4];
+      grid-template-columns: repeat(4, 191px);
+}
+
+.footer .container .footer-links .cl1, .footer .container .footer-links .cl2, .footer .container .footer-links .cl3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .container .footer-links .cl1 h5, .footer .container .footer-links .cl2 h5, .footer .container .footer-links .cl3 h5 {
+  color: white;
+  margin-bottom: 34px;
+}
+
+.footer .container .footer-links .cl1 a, .footer .container .footer-links .cl2 a, .footer .container .footer-links .cl3 a {
+  color: #9e9aa7;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  margin-bottom: 17px;
+}
+
+.footer .container .footer-links .cl1 a:hover, .footer .container .footer-links .cl2 a:hover, .footer .container .footer-links .cl3 a:hover {
+  color: #2acfcf;
+}
+
+.footer .container .socialMedia-icons img {
+  cursor: pointer;
+  margin-right: 17px;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.footer .container .socialMedia-icons img:hover {
+  color: #2acfcf;
+  fill: #2acfcf;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 1160px) {
+  .footer .container {
+    -ms-grid-columns: 300px 560px 166px;
+        grid-template-columns: 300px 560px 166px;
+  }
+}
+
+@media screen and (max-width: 1055px) {
+  .footer .container {
+    -ms-grid-columns: 230px 530px 166px;
+        grid-template-columns: 230px 530px 166px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .footer .container {
+    -ms-grid-columns: 210px 500px 166px;
+        grid-template-columns: 210px 500px 166px;
+  }
+  .footer .container .footer-links {
+    -ms-grid-columns: (161px)[3];
+        grid-template-columns: repeat(3, 161px);
+  }
+}
+
+@media screen and (max-width: 903px) {
+  .footer .container {
+    -ms-grid-columns: 210px 500px;
+        grid-template-columns: 210px 500px;
+  }
+  .footer .container .socialMedia-icons {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-start: 2;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .footer .container {
+    -ms-grid-columns: 200px;
+        grid-template-columns: 200px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .container .logo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .footer .container .footer-links {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .footer .container .footer-links .cl1, .footer .container .footer-links .cl2, .footer .container .footer-links .cl3 {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .container .footer-links .cl1 h5, .footer .container .footer-links .cl2 h5, .footer .container .footer-links .cl3 h5 {
+    margin-bottom: 6px;
+  }
+  .footer .container .footer-links .cl1 a:last-child, .footer .container .footer-links .cl2 a:last-child, .footer .container .footer-links .cl3 a:last-child {
+    margin-bottom: 40px;
+  }
+  .footer .container .socialMedia-icons {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-start: 1;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

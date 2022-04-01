@@ -2,7 +2,7 @@
 
 .header-hero {
 		background-image: url(../../../images/illustration-working.svg);
-    background-position: 90% 0%;
+    background-position: 100% 0%;
     background-size:auto;
     background-repeat: no-repeat; 
 
@@ -11,37 +11,49 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	gap: 2rem;
-  min-height: 37rem;
+  min-height: calc(800px - 8.375rem);
 	.hero-text {
-		max-width: 400px;
-		//TODO:
+		width: 570px;
+		padding-right: 150px;
 		h1 {
-			padding-bottom: 1rem;
+			line-height: 1.2;
 		}
 		p {
-			padding-bottom: 1rem;
+			padding: 0;
+			padding-bottom: 40px;
+		}
+		button {
+			padding:21px 40px;
 		}
 	}
 }
+	@media screen and (max-width: 1136px) {
+		.header-hero {
+			background-size: 70%;
+		} 
+
+	}
 
 	@media screen and (max-width: 770px) {
 		.hero {
 			flex-direction: column;
-  		min-height: 47rem;
+  		min-height: 982px;
 			.hero-text {
-				margin-top: 18rem;
+				margin-top: 376px;
+				padding-right: 0;
+				width: 100%;
 				text-align: center;
 				//TODO:
 				h1 {
+					font-size:45px ;
 				}
-				p {
+				p,button {
+					font-size: 21px;
 				}
 			}
 		}
 		.header-hero {
-    	background-position: top center;
-			background-size: 70%;
+			background-size: 100%;
 		} 
 		
 	

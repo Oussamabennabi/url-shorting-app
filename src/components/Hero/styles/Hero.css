@@ -1,6 +1,6 @@
 .header-hero {
   background-image: url(../../../images/illustration-working.svg);
-  background-position: 90% 0%;
+  background-position: 100% 0%;
   background-size: auto;
   background-repeat: no-repeat;
 }
@@ -15,20 +15,31 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
-  min-height: 37rem;
+  min-height: calc(800px - 8.375rem);
 }
 
 .hero .hero-text {
-  max-width: 400px;
+  width: 570px;
+  padding-right: 150px;
 }
 
 .hero .hero-text h1 {
-  padding-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .hero .hero-text p {
-  padding-bottom: 1rem;
+  padding: 0;
+  padding-bottom: 40px;
+}
+
+.hero .hero-text button {
+  padding: 21px 40px;
+}
+
+@media screen and (max-width: 1136px) {
+  .header-hero {
+    background-size: 70%;
+  }
 }
 
 @media screen and (max-width: 770px) {
@@ -37,15 +48,22 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 47rem;
+    min-height: 982px;
   }
   .hero .hero-text {
-    margin-top: 18rem;
+    margin-top: 376px;
+    padding-right: 0;
+    width: 100%;
     text-align: center;
   }
+  .hero .hero-text h1 {
+    font-size: 45px;
+  }
+  .hero .hero-text p, .hero .hero-text button {
+    font-size: 21px;
+  }
   .header-hero {
-    background-position: top center;
-    background-size: 70%;
+    background-size: 100%;
   }
 }
 /*# sourceMappingURL=Hero.css.map */

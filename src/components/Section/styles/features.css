@@ -3,11 +3,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .features .section-info {
   text-align: center;
   width: 60%;
+  margin-top: 3rem;
 }
 
 .features .section-info h2 {
@@ -26,13 +33,12 @@
           align-items: center;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  min-height: 35rem;
   gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .features .section-card {
-  /* width: 300px; */
   min-height: 250px;
   border-radius: 8px;
   background-color: white;
@@ -51,8 +57,9 @@
 }
 
 .features .section-card .artical-info {
-  padding: 3rem;
-  padding-top: 3.5rem;
+  padding: 32px;
+  padding-top: 84px;
+  padding-bottom: 47px;
 }
 
 .features .section-card .artical-info h3 {
